@@ -51,13 +51,13 @@ if(isset($_POST['send'])){
 
 <section class="heading">
     <h3>contact us</h3>
-    <p> <a href="home.php">home</a> / contact </p>
+    <p> <a href="home.php">Home</a> / Contact </p>
 </section>
 
 <section class="contact">
 
     <form action="" method="POST">
-        <h3>send us message!</h3>
+        <h3>Send us message!</h3>
         <input type="text" name="name" placeholder="enter your name" class="box" required> 
         <input type="email" name="email" placeholder="enter your email" class="box" required>
         <input type="number" name="number" placeholder="enter your number" class="box" required>

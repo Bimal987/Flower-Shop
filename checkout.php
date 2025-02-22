@@ -16,7 +16,7 @@ if(isset($_POST['order'])){
     $number = mysqli_real_escape_string($conn, $_POST['Number']);
     $email = mysqli_real_escape_string($conn, $_POST['Email']);
     $method = mysqli_real_escape_string($conn, $_POST['Method']);
-    $address = mysqli_real_escape_string($conn, 'flat no. '. $_POST['flat'].', '. $_POST['street'].', '. $_POST['city'].', '. $_POST['country'].' - '. $_POST['pin_code']);
+    $address = mysqli_real_escape_string($conn, 'Province '. $_POST['Province'].', '. $_POST['district'].', '. $_POST['city'].', ');
     $placed_on = date('d-M-Y');
 
     $cart_total = 0;
@@ -69,7 +69,7 @@ if(isset($_POST['order'])){
 
 <section class="heading">
     <h3>checkout order</h3>
-    <p> <a href="home.php">home</a> / checkout </p>
+    <p> <a href="home.php">Home</a> / checkout </p>
 </section>
 
 <section class="display-order">
@@ -88,61 +88,61 @@ if(isset($_POST['order'])){
             echo '<p class="empty">your cart is empty</p>';
         }
     ?>
-    <div class="grand-total">grand total : <span>$<?php echo $grand_total; ?>/-</span></div>
+    <div class="grand-total">Grand Total : <span>₹<?php echo $grand_total; ?>/-</span></div>
 </section>
 
 <section class="checkout">
 
     <form action="" method="POST">
 
-        <h3>place your order</h3>
+        <h3>Place your order</h3>
 
         <div class="flex">
             <div class="inputBox">
-                <span>your name :</span>
+                <span>Full Name :</span>
                 <input type="text" name="name" placeholder="enter your name">
             </div>
             <div class="inputBox">
-                <span>your number :</span>
+                <span>Phone No. :</span>
                 <input type="number" name="number" min="0" placeholder="enter your number">
             </div>
             <div class="inputBox">
-                <span>your email :</span>
+                <span>Email :</span>
                 <input type="email" name="email" placeholder="enter your email">
             </div>
             <div class="inputBox">
-                <span>payment method :</span>
+                <span>Payment Method :</span>
                 <select name="method">
                     <option value="cash on delivery">cash on delivery</option>
-                    <option value="credit card">credit card</option>
-                    <option value="paypal">paypal</option>
-                    <option value="paytm">paytm</option>
+                    <option value="credit/Debit card">Credit/Debit card</option>
+                    <option value="Esewa">Esewa</option>
+                    <option value="Khalti">Khalti</option>
                 </select>
             </div>
             <div class="inputBox">
-                <span>address line 01 :</span>
-                <input type="text" name="flat" placeholder="e.g. flat no.">
+                <span>Province:</span>
+                <input type="text" name="flat" placeholder="Bagmati">
             </div>
             <div class="inputBox">
-                <span>address line 02 :</span>
-                <input type="text" name="street" placeholder="e.g.  streen name">
+                <span>District:</span>
+                <input type="text" name="street" placeholder="Lalitpur">
             </div>
             <div class="inputBox">
                 <span>city :</span>
-                <input type="text" name="city" placeholder="e.g. mumbai">
+                <input type="text" name="city" placeholder="Chapagaun">
             </div>
-            <div class="inputBox">
+            <!-- <div class="inputBox">
                 <span>state :</span>
                 <input type="text" name="state" placeholder="e.g. maharashtra">
             </div>
             <div class="inputBox">
                 <span>country :</span>
                 <input type="text" name="country" placeholder="e.g. india">
-            </div>
-            <div class="inputBox">
+            </div> -->
+            <!-- <div class="inputBox">
                 <span>pin code :</span>
                 <input type="number" min="0" name="pin_code" placeholder="e.g. 123456">
-            </div>
+            </div> -->
         </div>
 
         <input type="submit" name="order" value="order now" class="btn">
