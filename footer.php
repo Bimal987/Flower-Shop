@@ -19,22 +19,22 @@
 
         <div class="box">
             <h3>contact info</h3>
-            <p> <i class="fas fa-phone"></i> 01-520000 </p>
-            <p> <i class="fas fa-phone"></i> +977 9800000000 </p>
+            <p> <i class="fas fa-phone"></i> 01-543210 </p>
+            <p> <i class="fas fa-phone"></i> +977 98******** </p>
             <p> <i class="fas fa-envelope"></i> info@bagaicha.com </p>
-            <p> <i class="fas fa-map-marker-alt"></i> Godawari-11, Lalitpur Nepal</p>
+            <p> <i class="fas fa-map-marker-alt"></i> Godawari-11, Lalitpur,Nepal</p>
         </div>
 
         <div class="box">
             <h3>follow us</h3>
             <a href="#"><i class="fab fa-facebook-f"></i>Facebook</a>
-            <a href="#"><i class="fab fa-twitter"></i>Twitter</a>
+            <!-- <a href="#"><i class="fab fa-twitter"></i>Twitter</a> -->
             <a href="#"><i class="fab fa-instagram"></i>Instagram</a>
-            <a href="#"><i class="fab fa-linkedin"></i>Linkedin</a>
+            <!-- <a href="#"><i class="fab fa-linkedin"></i>Linkedin</a> -->
         </div>
+<!-- 
+    </div> -->
 
-    </div>
-
-    <div class="credit">&copy; copyright @ <?php echo date('Y'); ?> by <span>@Bagaicha </span> </div>
+    <div class="credit">&copy; copyright By <span>@Bagaicha </span> </div>
 
 </section>
