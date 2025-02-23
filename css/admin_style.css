@@ -321,12 +321,17 @@ section{
    background-color: var(--white);
    box-shadow: var(--box-shadow);
    border-radius: .5rem;
+   height: 55rem;   
    position: relative;
+   overflow: hidden;
 }
 
 .show-products .box-container .box .image{
+   width: 25rem;
    height: 30rem;
    margin-bottom: .5rem;
+   object-fit: cover;
+   
 }
 
 .show-products .box-container .box .price{
@@ -350,6 +355,8 @@ section{
    color:var(--light-color);
    font-size: 1.5rem;
    padding:.5rem 0;
+   height: 9.5rem;
+   overflow: hidden;
 }
 
 .update-product form{

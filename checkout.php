@@ -12,11 +12,11 @@ if(!isset($user_id)){
 
 if(isset($_POST['order'])){
 
-    $name = mysqli_real_escape_string($conn, $_POST['Name']);
-    $number = mysqli_real_escape_string($conn, $_POST['Number']);
-    $email = mysqli_real_escape_string($conn, $_POST['Email']);
-    $method = mysqli_real_escape_string($conn, $_POST['Method']);
-    $address = mysqli_real_escape_string($conn, 'Province '. $_POST['Province'].', '. $_POST['district'].', '. $_POST['city'].', ');
+    $name = mysqli_real_escape_string($conn, $_POST['name']);
+    $number = mysqli_real_escape_string($conn, $_POST['number']);
+    $email = mysqli_real_escape_string($conn, $_POST['email']);
+    $method = mysqli_real_escape_string($conn, $_POST['method']);
+    $address = mysqli_real_escape_string($conn,  $_POST['address']);
     $placed_on = date('d-M-Y');
 
     $cart_total = 0;
@@ -100,49 +100,41 @@ if(isset($_POST['order'])){
         <div class="flex">
             <div class="inputBox">
                 <span>Full Name :</span>
-                <input type="text" name="name" placeholder="enter your name">
+                <input type="text" name="name" placeholder="Enter your name">
             </div>
             <div class="inputBox">
                 <span>Phone No. :</span>
-                <input type="number" name="number" min="0" placeholder="enter your number">
+                <input type="number" name="number" min="0" placeholder="Enter your number">
             </div>
             <div class="inputBox">
                 <span>Email :</span>
-                <input type="email" name="email" placeholder="enter your email">
+                <input type="email" name="email" placeholder="Enter your email">
             </div>
             <div class="inputBox">
                 <span>Payment Method :</span>
                 <select name="method">
-                    <option value="cash on delivery">cash on delivery</option>
+                    <option value="cash on delivery">Cash on delivery</option>
                     <option value="credit/Debit card">Credit/Debit card</option>
                     <option value="Esewa">Esewa</option>
                     <option value="Khalti">Khalti</option>
                 </select>
             </div>
-            <div class="inputBox">
+            <!-- <div class="inputBox">
                 <span>Province:</span>
-                <input type="text" name="flat" placeholder="Bagmati">
+                <input type="text" name="province" placeholder="Bagmati">
             </div>
             <div class="inputBox">
                 <span>District:</span>
-                <input type="text" name="street" placeholder="Lalitpur">
+                <input type="text" name="district" placeholder="Lalitpur">
             </div>
             <div class="inputBox">
-                <span>city :</span>
+                <span>City :</span>
                 <input type="text" name="city" placeholder="Chapagaun">
-            </div>
-            <!-- <div class="inputBox">
-                <span>state :</span>
-                <input type="text" name="state" placeholder="e.g. maharashtra">
-            </div>
+            </div> -->
             <div class="inputBox">
-                <span>country :</span>
-                <input type="text" name="country" placeholder="e.g. india">
-            </div> -->
-            <!-- <div class="inputBox">
-                <span>pin code :</span>
-                <input type="number" min="0" name="pin_code" placeholder="e.g. 123456">
-            </div> -->
+                <span>Address:</span>
+                <input type="text" name="address" placeholder="Eg: Chapagaun, Lalitpur">
+            </div>
         </div>
 
         <input type="submit" name="order" value="order now" class="btn">

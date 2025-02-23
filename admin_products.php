@@ -18,7 +18,7 @@ if(isset($_POST['add_product'])){
    $image = $_FILES['image']['name'];
    $image_size = $_FILES['image']['size'];
    $image_tmp_name = $_FILES['image']['tmp_name'];
-   $image_folter = 'uploaded_img/'.$image;
+   $image_folder = 'uploaded_img/'.$image;
 
    $select_product_name = mysqli_query($conn, "SELECT name FROM `products` WHERE name = '$name'") or die('query failed');
 
@@ -31,7 +31,7 @@ if(isset($_POST['add_product'])){
          if($image_size > 2000000){
             $message[] = 'image size is too large!';
          }else{
-            move_uploaded_file($image_tmp_name, $image_folter);
+            move_uploaded_file($image_tmp_name, $image_folder);
             $message[] = 'product added successfully!';
          }
       }
@@ -46,7 +46,6 @@ if(isset($_GET['delete'])){
    $fetch_delete_image = mysqli_fetch_assoc($select_delete_image);
    unlink('uploaded_img/'.$fetch_delete_image['image']);
    mysqli_query($conn, "DELETE FROM `products` WHERE id = '$delete_id'") or die('query failed');
-   mysqli_query($conn, "DELETE FROM `wishlist` WHERE pid = '$delete_id'") or die('query failed');
    mysqli_query($conn, "DELETE FROM `cart` WHERE pid = '$delete_id'") or die('query failed');
    header('location:admin_products.php');
 
@@ -113,18 +112,6 @@ if(isset($_GET['delete'])){
    
 
 </section>
-
-
-
-
-
-
-
-
-
-
-
-
 <script src="js/admin_script.js"></script>
 
 </body>
