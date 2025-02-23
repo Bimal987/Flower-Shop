@@ -1,8 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600&display=swap');
 
 :root{
-   --purple:#290f65;
-   --red:#c0392b;
+   /* --purple:#391098; */
+   --purple:#ff7eb3;
+   --red:#cf3220;
    --orange:#f39c12;
    --black:#333;
    --white:#fff;
@@ -144,7 +145,7 @@ section{
    align-items: center;
    justify-content: center;
    gap:1rem;
-   background-color: var(--black);
+   background: linear-gradient(90deg, #355c7d 0%, #6c5b7b 50%, #c06c84 100%);
    text-align: center;
    min-height: 25vh;
 }
@@ -162,6 +163,7 @@ section{
 
 .heading p a{
    color:var(--purple);
+   
 }
 
 .heading p a:hover{
@@ -991,6 +993,9 @@ section{
 
 .footer{
    background-color: var(--white);
+   /* background: linear-gradient(90deg, #355c7d 0%, #6c5b7b 50%, #c06c84 100%); */
+   
+
 }
 
 .footer .box-container{

@@ -32,8 +32,8 @@
             <a href="#"><i class="fab fa-instagram"></i>Instagram</a>
             <!-- <a href="#"><i class="fab fa-linkedin"></i>Linkedin</a> -->
         </div>
-<!-- 
-    </div> -->
+
+    </div>
 
     <div class="credit">&copy; copyright By <span>@Bagaicha </span> </div>
 

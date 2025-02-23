@@ -10,15 +10,15 @@ if(isset($_POST['submit'])){
    $email = mysqli_real_escape_string($conn, $filter_email);
    $filter_pass = filter_var($_POST['pass'], FILTER_SANITIZE_STRING);
    $pass = mysqli_real_escape_string($conn, md5($filter_pass));
-   $filter_cpass = filter_var($_POST['cpass'], FILTER_SANITIZE_STRING);
-   $cpass = mysqli_real_escape_string($conn, md5($filter_cpass));
+   $filter_cPass = filter_var($_POST['cPass'], FILTER_SANITIZE_STRING);
+   $cPass = mysqli_real_escape_string($conn, md5($filter_cPass));
 
    $select_users = mysqli_query($conn, "SELECT * FROM `users` WHERE email = '$email'") or die('query failed');
 
    if(mysqli_num_rows($select_users) > 0){
       $message[] = 'user already exist!';
    }else{
-      if($pass != $cpass){
+      if($pass != $cPass){
          $message[] = 'confirm password not matched!';
       }else{
          mysqli_query($conn, "INSERT INTO `users`(name, email, password) VALUES('$name', '$email', '$pass')") or die('query failed');
@@ -68,7 +68,7 @@ if(isset($message)){
       <input type="text" name="name" class="box" placeholder="enter your username" required>
       <input type="email" name="email" class="box" placeholder="enter your email" required>
       <input type="password" name="pass" class="box" placeholder="enter your password" required>
-      <input type="password" name="cpass" class="box" placeholder="confirm your password" required>
+      <input type="password" name="cPass" class="box" placeholder="confirm your password" required>
       <input type="submit" class="btn" name="submit" value="register now">
       <p>Already have an account? <a href="login.php">login now</a></p>
    </form>
