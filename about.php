@@ -41,7 +41,7 @@ if(!isset($user_id)){
     <div class="flex">
 
         <div class="image">
-            <img src="images/about-img-1.png" alt="">
+            <img src="images/about4.jpg" alt="">
         </div>
 
         <div class="content">
@@ -69,7 +69,7 @@ At Bagaicha, we provide a wide variety of fresh flowers for all occasions, inclu
         </div>
 
         <div class="image">
-            <img src="images/about-img-2.jpg" alt="">
+            <img src="images/about2.jpg" alt="">
         </div>
 
     </div>
@@ -77,7 +77,7 @@ At Bagaicha, we provide a wide variety of fresh flowers for all occasions, inclu
     <div class="flex">
 
         <div class="image">
-            <img src="images/about-img-3.jpg" alt="">
+            <img src="images/about3.jpg" alt="">
         </div>
 
         <div class="content">
@@ -94,18 +94,6 @@ Our team at Bagaicha is passionate about providing high-quality flowers, customi
     </div>
 
 </section>
-
-
-
-
-
-
-
-
-
-
-
-
 
 <?php @include 'footer.php'; ?>
 

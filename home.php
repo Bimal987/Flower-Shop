@@ -70,6 +70,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['add_to_cart'])) {
         <h3>New Collections</h3>
         <a href="about.php" class="btn">Discover More</a>
     </div>
+    <div class="overlay"></div>
 </section>
 
 <section class="products">

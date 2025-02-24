@@ -67,11 +67,6 @@ if(isset($_POST['send'])){
 
 </section>
 
-
-
-
-
-
 <?php @include 'footer.php'; ?>
 
 <script src="js/script.js"></script>
