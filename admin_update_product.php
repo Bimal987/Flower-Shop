@@ -22,7 +22,7 @@ if(isset($_POST['update_product'])){
    $image = $_FILES['image']['name'];
    $image_size = $_FILES['image']['size'];
    $image_tmp_name = $_FILES['image']['tmp_name'];
-   $image_folter = 'uploaded_img/'.$image;
+   $image_folder = 'uploaded_img/'.$image;
    $old_image = $_POST['update_p_image'];
    
    if(!empty($image)){
@@ -30,14 +30,14 @@ if(isset($_POST['update_product'])){
          $message[] = 'image file size is too large!';
       }else{
          mysqli_query($conn, "UPDATE `products` SET image = '$image' WHERE id = '$update_p_id'") or die('query failed');
-         move_uploaded_file($image_tmp_name, $image_folter);
+         move_uploaded_file($image_tmp_name, $image_folder);
          unlink('uploaded_img/'.$old_image);
          $message[] = 'image updated successfully!';
       }
    }
 
    $message[] = 'product updated successfully!';
-
+   
 }
 
 ?>

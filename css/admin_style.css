@@ -315,21 +315,22 @@ section{
 }
 
 .show-products .box-container .box{
+   display: flex;
+   flex-direction: column;
    text-align: center;
    padding:2rem;
    border:var(--border);
    background-color: var(--white);
    box-shadow: var(--box-shadow);
    border-radius: .5rem;
-   height: 55rem;   
+   height: 60rem;   
    position: relative;
    overflow: hidden;
 }
 
 .show-products .box-container .box .image{
-   width: 25rem;
-   height: 30rem;
-   margin-bottom: .5rem;
+   width: auto;
+   height: 28rem;
    object-fit: cover;
    
 }
@@ -348,6 +349,8 @@ section{
    margin:1rem 0;
    font-size: 2rem;
    color:var(--black);
+   max-height: 5rem;
+   overflow: hidden;
 }
 
 .show-products .box-container .box .details{
@@ -355,8 +358,10 @@ section{
    color:var(--light-color);
    font-size: 1.5rem;
    padding:.5rem 0;
-   height: 9.5rem;
-   overflow: hidden;
+   /* height: 15rem; */
+   flex: 1;
+   overflow-y: auto;
+   scrollbar-width: none;
 }
 
 .update-product form{

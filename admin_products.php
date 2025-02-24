@@ -36,7 +36,8 @@ if(isset($_POST['add_product'])){
          }
       }
    }
-
+   // header("Location: admin_products.php");
+   // exit();
 }
 
 if(isset($_GET['delete'])){
@@ -47,8 +48,8 @@ if(isset($_GET['delete'])){
    unlink('uploaded_img/'.$fetch_delete_image['image']);
    mysqli_query($conn, "DELETE FROM `products` WHERE id = '$delete_id'") or die('query failed');
    mysqli_query($conn, "DELETE FROM `cart` WHERE pid = '$delete_id'") or die('query failed');
-   header('location:admin_products.php');
-
+   header('location: admin_products.php');
+   exit();
 }
 
 ?>
@@ -84,6 +85,15 @@ if(isset($_GET['delete'])){
    </form>
 
 </section>
+<?php if(isset($message)): ?>
+   <div class="message <?php echo $message_type; ?>"><?php echo $message; ?></div>
+   <script>
+       // Delay the redirect for 2 seconds (2000 milliseconds)
+       setTimeout(function(){
+           window.location.href = "admin_products.php"; // Redirect to the products page
+       }, 2000);
+   </script>
+<?php endif; ?>
 
 <section class="show-products">
 
