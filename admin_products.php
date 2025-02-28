@@ -54,6 +54,8 @@ if(isset($_GET['delete'])){
 
 ?>
 
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -85,6 +87,7 @@ if(isset($_GET['delete'])){
    </form>
 
 </section>
+
 <?php if(isset($message)): ?>
    <div class="message <?php echo $message_type; ?>"><?php echo $message; ?></div>
    <script>
