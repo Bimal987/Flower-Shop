@@ -100,11 +100,6 @@ if(isset($_POST['update_quantity'])){
 
 </section>
 
-
-
-
-
-
 <?php @include 'footer.php'; ?>
 
 <script src="js/script.js"></script>

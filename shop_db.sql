@@ -150,32 +150,7 @@ CREATE TABLE `users` (
 -- (2, 'user A', 'user01@gmail.com', 'user01', 'user'),
 -- (3, 'user B', 'user02@gmail.com', 'user02', 'user');
 
--- --------------------------------------------------------
-
---
--- Table structure for table `wishlist`
---
-
--- CREATE TABLE `wishlist` (
---   `id` int(100) NOT NULL,
---   `user_id` int(100) NOT NULL,
---   `pid` int(100) NOT NULL,
---   `name` varchar(100) NOT NULL,
---   `price` int(100) NOT NULL,
---   `image` varchar(100) NOT NULL
--- ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
-
---
--- Dumping data for table `wishlist`
---
-
--- INSERT INTO `wishlist` (`id`, `user_id`, `pid`, `name`, `price`, `image`) VALUES
--- (60, 14, 19, 'pink bouquet', 15, 'pink bouquet.jpg');
-
---
--- Indexes for dumped tables
---
-
+-
 --
 -- Indexes for table `cart`
 --
@@ -205,13 +180,6 @@ ALTER TABLE `products`
 --
 ALTER TABLE `users`
   ADD PRIMARY KEY (`id`);
-
---
--- Indexes for table `wishlist`
---
--- ALTER TABLE `wishlist`
---   ADD PRIMARY KEY (`id`);
-
 --
 -- AUTO_INCREMENT for dumped tables
 --
