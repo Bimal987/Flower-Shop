@@ -88,7 +88,7 @@ if(isset($_POST['order'])){
             echo '<p class="empty">your cart is empty</p>';
         }
     ?>
-    <div class="grand-total">Grand Total : <span>₹<?php echo $grand_total; ?>/-</span></div>
+    <div class="grand-total">Grand Total : <span>रु<?php echo $grand_total; ?>/-</span></div>
 </section>
 
 <section class="checkout">
@@ -142,11 +142,6 @@ if(isset($_POST['order'])){
     </form>
 
 </section>
-
-
-
-
-
 
 <?php @include 'footer.php'; ?>
 
